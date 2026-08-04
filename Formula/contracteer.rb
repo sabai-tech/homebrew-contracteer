@@ -1,30 +1,30 @@
-# Generated with JReleaser 1.23.0 at 2026-06-07T14:11:48.455317627Z
+# Generated with JReleaser 1.23.0 at 2026-08-04T08:35:41.220476574Z
 
 class Contracteer < Formula
   desc "The loyal guard of your API contracts."
-  homepage "https://github.com/sabai-tech/contracteer"
-  version "3.1.0"
+  homepage "https://contracteer.dev"
+  version "4.0.0"
   license "GPL-3.0-only"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sabai-tech/contracteer/releases/download/3.1.0/contracteer-3.1.0-linux-aarch_64.zip"
-    sha256 "9b3aeee93feef9b786c15acf4b908e8bf3f63e2e24b7544eb93e4f58a4a1b600"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-linux-aarch_64.zip"
+    sha256 "c00fb177f1313806d8584c634acc02f90ae2299eab858154cd9118adc493751c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sabai-tech/contracteer/releases/download/3.1.0/contracteer-3.1.0-linux-x86_64.zip"
-    sha256 "cda688781768bf0d8fe57cc2f1d5307beae9353b3f7719f60e7753e846f8a3b6"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-linux-x86_64.zip"
+    sha256 "781be856f0f1764c8cf6fa0936bc767ba5733d90f289780f066f33d7e0c7f52e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sabai-tech/contracteer/releases/download/3.1.0/contracteer-3.1.0-osx-aarch_64.zip"
-    sha256 "40a67acb540e4cb254f4850e4aa6a1ccd41e3810f3a8bb0ce4a84e8ae7ed27a2"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-osx-aarch_64.zip"
+    sha256 "05a92b89d2ed7d586fac62006a470808c39f5fd1d0ffd2f39d2e3c84910a8cf8"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sabai-tech/contracteer/releases/download/3.1.0/contracteer-3.1.0-osx-x86_64.zip"
-    sha256 "c2e9bbe60dd0f7461929e85a8b26222b95793bf0c12772e110aefa62bd97a517"
+    url "https://github.com/contracteer-dev/contracteer/releases/download/4.0.0/contracteer-4.0.0-osx-x86_64.zip"
+    sha256 "603181cc17e46c1b8b21210afba49dfd74f6bbb73a70ca0c6a355db1874ea2a0"
   end
 
   livecheck do
-    url "https://github.com/sabai-tech/contracteer/releases/latest"
+    url "https://github.com/contracteer-dev/contracteer/releases/latest"
   end
 
   def install
@@ -34,6 +34,6 @@ class Contracteer < Formula
 
   test do
     output = shell_output("#{bin}/contracteer --version")
-    assert_match "3.1.0", output
+    assert_match "4.0.0", output
   end
 end
